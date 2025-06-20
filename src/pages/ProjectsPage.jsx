@@ -182,11 +182,19 @@ const ProjectsPage = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   const handleLike = (projectId) => {
+    // localStorage'dan daha önce beğenilen projeleri al
+    const likedProjects = JSON.parse(localStorage.getItem('likedProjects') || '[]');
+    if (likedProjects.includes(projectId)) {
+      toast({ title: "Zaten beğendiniz!", description: "Bir projeyi sadece bir kez beğenebilirsiniz." });
+      return;
+    }
     setProjects(prevProjects => {
-      const updatedProjects = prevProjects.map(p => 
+      const updatedProjects = prevProjects.map(p =>
         p.id === projectId ? { ...p, likes: (p.likes || 0) + 1 } : p
       );
       localStorage.setItem('portfolioProjects', JSON.stringify(updatedProjects));
+      // Beğenilen projeyi localStorage'a ekle
+      localStorage.setItem('likedProjects', JSON.stringify([...likedProjects, projectId]));
       toast({ title: "Beğenildi!", description: "Projeyi beğendiniz." });
       return updatedProjects;
     });
