@@ -119,7 +119,7 @@ const ContactPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0 overflow-x-auto">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -132,7 +132,7 @@ const ContactPage = () => {
                     Mesaj Gönder
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-6">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4 min-w-0">
                       <div>
@@ -140,6 +140,7 @@ const ContactPage = () => {
                           Adınız
                         </label>
                         <Input
+                          className="rounded-lg"
                           id="name"
                           name="name"
                           value={formData.name}
@@ -153,6 +154,7 @@ const ContactPage = () => {
                           E-posta
                         </label>
                         <Input
+                          className="rounded-lg"
                           id="email"
                           type="email"
                           name="email"
@@ -168,6 +170,7 @@ const ContactPage = () => {
                         Konu
                       </label>
                       <Input
+                        className="rounded-lg"
                         id="subject"
                         name="subject"
                         value={formData.subject}
@@ -181,6 +184,7 @@ const ContactPage = () => {
                         Mesajınız
                       </label>
                       <Textarea
+                        className="rounded-lg"
                         id="message"
                         name="message"
                         value={formData.message}
@@ -205,13 +209,13 @@ const ContactPage = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col items-center space-y-8"
             >
-              <Card className="glass-effect border-0 w-full max-w-md">
+              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gradient">
                     İletişim Bilgileri
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-6 p-6">
                   {contactInfo.map((info, index) => (
                     <motion.a
                       key={index}
@@ -233,7 +237,7 @@ const ContactPage = () => {
                 </CardContent>
               </Card>
 
-              <Card className="glass-effect border-0 w-full max-w-md">
+              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl">
                 <CardContent className="p-6 text-center">
                   <h3 className="text-xl font-semibold mb-4">CV İndir</h3>
                   <p className="text-muted-foreground mb-6">
