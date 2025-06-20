@@ -53,13 +53,13 @@ const AboutPage = () => {
 
 
   return (
-  <div className="min-h-screen">
+  <div className="min-h-screen overflow-x-hidden bg-white">
     <Header />
     <AdminSecretButton />
 
     {/* Hakkımda Bölümü */}
-    <section className="pt-24 sm:pt-32 pb-14 sm:pb-20 px-3 xs:px-4 sm:px-6">
-      <div className="container mx-auto">
+    <section className="pt-24 sm:pt-32 pb-14 sm:pb-20">
+      <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -129,8 +129,8 @@ const AboutPage = () => {
     </section>
 
     {/* Başarılar Bölümü */}
-    <section className="py-14 sm:py-20 px-3 xs:px-4 sm:px-6 bg-gradient-to-r from-amber-50 to-orange-50">
-      <div className="container mx-auto">
+    <section className="py-14 sm:py-20 bg-gradient-to-r from-amber-50 to-orange-50">
+      <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -172,8 +172,8 @@ const AboutPage = () => {
     </section>
 
     {/* Tasarım Felsefem Bölümü */}
-    <section className="py-14 sm:py-20 px-3 xs:px-4 sm:px-6">
-      <div className="container mx-auto">
+    <section className="py-14 sm:py-20">
+      <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
