@@ -209,6 +209,10 @@ const ProjectsPage = () => {
     setShowImageModal(true);
   };
 
+  const filteredProjects = selectedCategory === 'Tümü'
+  ? projects
+  : projects.filter(project => project.category === selectedCategory);
+
   return (
   <div className="min-h-screen">
     <Header />
