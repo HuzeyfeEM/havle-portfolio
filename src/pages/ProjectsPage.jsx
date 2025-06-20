@@ -227,7 +227,7 @@ const ProjectsPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap flex-col xs:flex-row justify-center gap-2 sm:gap-4 mb-8 sm:mb-12"
+          className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 mb-8 sm:mb-12"
         >
           {categories.map((category) => (
             <Button
@@ -258,7 +258,7 @@ const ProjectsPage = () => {
                       className="w-full h-40 xs:h-52 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-300" 
                       alt={project.alt || project.title}
                       src={project.imageUrl || project.image || "https://images.unsplash.com/photo-1595872018818-97555653a011"} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-2 left-2 right-2 flex gap-1 sm:gap-2">
                         <Button size="sm" variant="secondary" className="flex-1" onClick={() => openProjectDetails(project)}>
                           <Eye className="h-4 w-4 mr-2" />
