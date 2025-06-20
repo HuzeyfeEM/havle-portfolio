@@ -102,7 +102,7 @@ const ContactPage = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Header />
       <AdminSecretButton />
-      
+
       <section className="pt-32 pb-20 px-2 xs:px-3 sm:px-6">
         <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
           <motion.div
@@ -120,13 +120,14 @@ const ContactPage = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0">
+            {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center"
+              className="flex justify-center items-center"
             >
-              <Card className="glass-effect border-0 w-full max-w-md">
+              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gradient">
                     Mesaj Gönder
@@ -194,7 +195,7 @@ const ContactPage = () => {
                         required
                       />
                     </div>
-                    <Button type="submit" className="w-full gradient-bg text-white">
+                    <Button type="submit" className="w-full gradient-bg text-white rounded-lg">
                       <Send className="h-4 w-4 mr-2" />
                       Mesaj Gönder
                     </Button>
@@ -203,13 +204,14 @@ const ContactPage = () => {
               </Card>
             </motion.div>
 
+            {/* Sağ Kartlar */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col items-center space-y-8"
+              className="flex flex-col items-center justify-center space-y-8"
             >
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl">
+              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gradient">
                     İletişim Bilgileri
@@ -237,14 +239,14 @@ const ContactPage = () => {
                 </CardContent>
               </Card>
 
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl">
+              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
                 <CardContent className="p-6 text-center">
                   <h3 className="text-xl font-semibold mb-4">CV İndir</h3>
                   <p className="text-muted-foreground mb-6">
                     Detaylı özgeçmişimi indirmek için aşağıdaki butona tıklayın.
                   </p>
-                  <Button 
-                    className="gradient-bg text-white"
+                  <Button
+                    className="gradient-bg text-white rounded-lg"
                     onClick={handleCvDownload}
                   >
                     CV İndir
