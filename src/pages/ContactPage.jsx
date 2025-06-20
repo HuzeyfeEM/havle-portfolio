@@ -127,7 +127,7 @@ const ContactPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center items-center"
           >
-            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl ml-2 mr-10">
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl ml-2 mr-14">
               <CardHeader>
                 <CardTitle className="text-2xl text-gradient">Mesaj Gönder</CardTitle>
               </CardHeader>
@@ -209,7 +209,7 @@ const ContactPage = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col items-center justify-center space-y-8"
           >
-            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl ml-2 mr-10">
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl ml-2 mr-14">
               <CardHeader>
                 <CardTitle className="text-2xl text-gradient">İletişim Bilgileri</CardTitle>
               </CardHeader>
@@ -235,7 +235,7 @@ const ContactPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl ml-2 mr-10">
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl ml-2 mr-14">
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-semibold mb-4">CV İndir</h3>
                 <p className="text-muted-foreground mb-6">
