@@ -125,7 +125,7 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center px-4 sm:px-6"
             >
               <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
                 <CardHeader>
