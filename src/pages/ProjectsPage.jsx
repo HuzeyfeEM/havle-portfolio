@@ -152,7 +152,7 @@ const ProjectsPage = () => {
     {
       id: 13,
       title: 'Luna Jewellry -logo Tasarımı',
-      category: 'logo Tasarımı',
+      category: 'Logo Tasarımı',
       description: 'Mücevher firması için minimalist kartvizit tasarımı. Elmas logosu ve temiz tipografi ile lüks marka kimliği yansıtılmış.',
       image: '/projects/img13.jpg',
       imageUrl: '/projects/img13.jpg',
@@ -163,7 +163,7 @@ const ProjectsPage = () => {
     {
       id: 14,
       title: "Berry's Bakery Tiramisu - Sosyal Medya Kampanyası",
-      category: 'sosyal Sosyal',
+      category: 'Sosyal Medya',
       description: 'Fırın işletmesi için tiramisu ürününe özel %50 indirim kampanyası sosyal medya postu. Instagram ve Facebook paylaşımları için tasarlanmış.',
       image: '/projects/img14.jpg',
       imageUrl: '/projects/img14.jpg',
