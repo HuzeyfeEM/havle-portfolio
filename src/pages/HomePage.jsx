@@ -28,14 +28,13 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
+            <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-7xl font-bold text-gradient mb-4 sm:mb-6">
               Havle El Muhammed
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Grafik tasarımda yaratıcılık ve profesyonelliği bir araya getiren, 
-              markanızın hikayesini görsel dille anlatan tasarımcı
+            <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-xs xs:max-w-md sm:max-w-3xl mx-auto">
+              Grafik tasarımda yaratıcılık ve profesyonelliği bir araya getiren, markanızın hikayesini görsel dille anlatan tasarımcı
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center">
               <Button asChild size="lg" className="gradient-bg text-white hover:opacity-90">
                 <Link to="/projeler">
                   Projelerimi İncele <ArrowRight className="ml-2 h-5 w-5" />
@@ -59,24 +58,24 @@ const HomePage = () => {
             className="relative"
           >
             <img   
-              className="w-full h-96 md:h-[500px] object-cover rounded-2xl shadow-2xl animate-float" 
+              className="w-full h-48 xs:h-64 sm:h-96 md:h-[500px] object-cover rounded-2xl shadow-2xl animate-float" 
               alt="Minimalist bir masa üzerinde çalışan genç bir kadın grafik tasarımcı"
-             src="https://images.unsplash.com/photo-1645743943096-fd41e391543c" />
+              src="https://images.unsplash.com/photo-1645743943096-fd41e391543c" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
           </motion.div>
         </div>
       </section>
 
       
-      <section className="py-20 px-6">
-        <div className="container mx-auto">
+      <section className="pt-20 pb-10 px-2 sm:pt-32 sm:pb-20 sm:px-6">
+        <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+            <h2 className="text-xl xs:text-2xl sm:text-4xl md:text-5xl font-bold text-gradient mb-4 sm:mb-6">
               Uzmanlık Alanlarım
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

@@ -184,7 +184,7 @@ const ProjectsPage = () => {
     setProjects(prevProjects => {
       const updatedProjects = prevProjects.map(p =>
         p.id === projectId
-          ? { ...p, likes: (p.likes || 0) + (alreadyLiked ? -1 : 1) }
+          ? { ...p, likes: Math.max(0, (p.likes || 0) + (alreadyLiked ? -1 : 1)) }
           : p
       );
       localStorage.setItem('portfolioProjects', JSON.stringify(updatedProjects));
