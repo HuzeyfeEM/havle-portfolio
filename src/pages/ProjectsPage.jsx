@@ -27,6 +27,149 @@ const ProjectsPage = () => {
       alt: 'Üstten çekilmiş latte fincanı, koyu yeşil arka plan ve bilgilendirici etiketlerle afiş tasarımı.',
       createdAt: new Date().toISOString(),
       likes: 0
+    },
+    {
+      id: 2,
+      title: 'Adele Melbourne Konser Afişi',
+      category: 'Afiş tasarımı',
+      description: 'Adele’in 2023 Melbourne konserini tanıtan minimal ve şık bir afiş tasarımıdır.',
+      image: '/projects/img2.jpg',
+      imageUrl: '/projects/img2.jpg',
+      alt: 'Siyah fon önünde oturan Adele’in yer aldığı altın sarısı yazılı konser afişi.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 3,
+      title: 'Nescafé Blend 43 İndirim Afişi',
+      category: 'Afiş tasarımı',
+      description: 'Nescafé ürününü ve %20 indirim fırsatını duyuran dikkat çekici bir kampanya afişidir.',
+      image: '/projects/img3.jpg',
+      imageUrl: '/projects/img3.jpg',
+      alt: 'Kırmızı kupalı Nescafé kavanozu ve kahve çekirdekleriyle süslenmiş indirimli ürün afişi.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 4,
+      title: 'Tiffany & Co. Mücevher Kataloğu Tasarımı',
+      category: 'Dergi ve Broşör tasarımı',
+      description: 'Lüks mücevher markası Tiffany & Co. için hazırlanan şık ve sade ürün tanıtım broşürü.',
+      image: '/projects/img4.jpg',
+      imageUrl: '/projects/img4.jpg',
+      alt: 'Tiffany & Co.\'ya ait yüzük, kolye, bilezik ve küpe gibi ürünlerin yer aldığı iki katlı turkuaz tonlarında mücevher broşürü.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 5,
+      title: 'Vogue Kış Moda Sayısı Dergi Tasarımı',
+      category: 'Broşör ve dergi tasarımı',
+      description: 'Moda trendleri, makyaj önerileri ve parfüm tanıtımlarını içeren şık bir Vogue dergi düzeni.',
+      image: '/projects/img5.jpg',
+      imageUrl: '/projects/img5.jpg',
+      alt: 'Kapağında bir modelin yer aldığı ve içinde kış defilesi, makyaj ürünleri ve Chanel parfüm tanıtımı bulunan Vogue moda dergisi sayfaları.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 6,
+      title: 'The Velvet Rose Çiçek Broşürü Tasarımı',
+      category: 'Broşör ve dergi tasarımı',
+      description: 'Çiçek koleksiyonu, fiyat listesi ve kişiye özel buket hizmeti tanıtımı için hazırlanmış zarif broşür.',
+      image: '/projects/img6.jpg',
+      imageUrl: '/projects/img6.jpg',
+      alt: 'Farklı çiçek aranjmanları, fiyat bilgileri, çiçek türleri ve iletişim detaylarını içeren pastel tonlarda tasarlanmış bir çiçek broşürü.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 7,
+      title: 'Modern Kozmetik Koleksiyonu',
+      category: '3D modelleme',
+      description: 'Modern kozmetik ürünlerinin minimalist 3D tasarımı. Kozmetik markaları ve e-ticaret platformları için ürün tanıtım görseli.',
+      image: '/projects/img7.jpg',
+      imageUrl: '/projects/img7.jpg',
+      alt: 'Yeşil-mavi zemin üzerinde geometrik platformlarda düzenlenmiş kozmetik ürünleri: parfüm, ruj, maskara, far paleti. Minimalist 3D render.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 8,
+      title: 'Ortaçağ Savaş Silahları - 3D Modelleme',
+      category: '3D modelleme',
+      description: 'Ortaçağ dönemine ait savaş baltası ve hançer silahlarının detaylı 3D modellenmesi. Oyun tasarımı, tarihi animasyonlar ve eğitim materyalleri için kullanılabilir.',
+      image: '/projects/img8.jpg',
+      imageUrl: '/projects/img8.jpg',
+      alt: 'Gri zemin üzerinde ortaçağ savaş baltası ve bronz renkli hançer. Realistik 3D render, gölgeli kompozisyon, tarihi silah tasarımı.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 9,
+      title: 'Şehir Sokağı -  3D Sahne',
+      category: '3D modelleme',
+      description: 'Kentsel yaşam alanını temsil eden minimalist 3D sahne tasarımı. Oyun geliştirme, animasyon projeleri ve mimari görselleştirme için kullanılabilir.',
+      image: '/projects/img9.jpg',
+      imageUrl: '/projects/img9.jpg',
+      alt: 'Gri tonlarda low poly stil şehir sahnesi: çok katlı binalar, sokak lambaları, şemsiyeli masa-sandalye setleri. Monokrom 3D render.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 10,
+      title: 'Retro Mutfak Tasarımı',
+      category: '3D modelleme',
+      description: '1950\'ler tarzı retro mutfak iç mekan tasarımının izometrik 3D görselleştirmesi. İç mimarlık portfolyoları ve oyun sahneleri için ideal.',
+      image: '/projects/img10.jpg',
+      imageUrl: '/projects/img10.jpg',
+      alt: 'İzometrik açıdan retro mutfak: yeşil buzdolabı, mavi mutfak dolapları, beyaz tezgah, davlumbaz, bar tabureleri, kareli zemin. Vintage stil 3D render.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 11,
+      title: 'Üniversite Bilgisayar Sınıfı - 3D  Modeli',
+      category: '3D modelleme',
+      description: 'Öğrencilik döneminden üniversite bilgisayar sınıfının nostaljik 3D yeniden yaratımı.',
+      image: '/projects/img11.jpg',
+      imageUrl: '/projects/img11.jpg',
+      alt: 'Low poly stil üniversite bilgisayar sınıfı: sıralı masalar, monitörler, sandalyeler, projeksiyon ekranı, gri duvarlar. İzometrik 3D görünüm.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 12,
+      title: 'Klasik Satranç Takımı - 3D Modelleme',
+      category: '3D modelleme',
+      description: 'Geleneksel satranç takımının detaylı 3D görselleştirmesi. Oyun tasarımı, eğitim materyalleri ve dijital sanat projeleri için kullanılabilir.',
+      image: '/projects/img12.jpg',
+      imageUrl: '/projects/img12.jpg',
+      alt: 'Siyah-beyaz kareli satranç tahtası üzerinde klasik satranç taşları: siyah ve beyaz taşlar başlangıç pozisyonunda dizili. Realistik 3D render.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 13,
+      title: 'Luna Jewellry -logo Tasarımı',
+      category: 'logo tasarımı',
+      description: 'Mücevher firması için minimalist kartvizit tasarımı. Elmas logosu ve temiz tipografi ile lüks marka kimliği yansıtılmış.',
+      image: '/projects/img13.jpg',
+      imageUrl: '/projects/img13.jpg',
+      alt: 'Ahşap zemin üzerinde beyaz kartvizitler: Luna Jewellry logosu, elmas simgesi, iletişim bilgileri. Minimalist tasarım, ön-arka görünüm.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 14,
+      title: "Berry's Bakery Tiramisu - Sosyal Medya Kampanyası",
+      category: 'sosyal medya',
+      description: 'Fırın işletmesi için tiramisu ürününe özel %50 indirim kampanyası sosyal medya postu. Instagram ve Facebook paylaşımları için tasarlanmış.',
+      image: '/projects/img14.jpg',
+      imageUrl: '/projects/img14.jpg',
+      alt: "Kahverengi-bordo tonlarda sosyal medya postu: Berry's Bakery logosu, tiramisu fotoğrafı, %50 indirim etiketi, ORDER NOW çağrısı ve web sitesi bilgisi.",
+      createdAt: new Date().toISOString(),
+      likes: 0
     }
   ]);
 }, []);
