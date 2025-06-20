@@ -232,10 +232,13 @@ const ProjectsPage = () => {
           {categories.map((category) => (
             <Button
               key={category}
+              size="sm"
               variant={selectedCategory === category ? "default" : "outline"}
               onClick={() => setSelectedCategory(category)}
-              className={selectedCategory === category ? "gradient-bg text-white" : ""}
-              size="sm"
+              className={
+                (selectedCategory === category ? "gradient-bg text-white " : "") +
+                "sm:w-auto sm:px-8"
+              }
             >
               {category}
             </Button>
