@@ -99,166 +99,169 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      <Header />
-      <AdminSecretButton />
+  <div className="min-h-screen overflow-x-hidden">
+    <Header />
+    <AdminSecretButton />
 
-      <section className="pt-32 pb-20 px-2 xs:px-3 sm:px-6">
-        <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
+    <section className="pt-32 pb-20 px-2 xs:px-3 sm:px-6">
+      <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
+            İletişim
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Projeniz için benimle iletişime geçin. Birlikte harika işler çıkaralım!
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0">
+          {/* Sol: Form */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-center items-center px-4 sm:px-6"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
-              İletişim
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Projeniz için benimle iletişime geçin. Birlikte harika işler çıkaralım!
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0">
-            {/* Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center items-center px-4 sm:px-6"
-            >
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-gradient">
-                    Mesaj Gönder
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4 min-w-0">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-2">
-                          Adınız
-                        </label>
-                        <Input
-                          className="rounded-lg"
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="Adınızı girin"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-2">
-                          E-posta
-                        </label>
-                        <Input
-                          className="rounded-lg"
-                          id="email"
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="E-posta adresinizi girin"
-                          required
-                        />
-                      </div>
-                    </div>
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+              <CardHeader>
+                <CardTitle className="text-2xl text-gradient">
+                  Mesaj Gönder
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4 min-w-0">
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                        Konu
+                      <label htmlFor="name" className="block text-sm font-medium mb-2">
+                        Adınız
                       </label>
                       <Input
                         className="rounded-lg"
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
+                        id="name"
+                        name="name"
+                        value={formData.name}
                         onChange={handleChange}
-                        placeholder="Mesaj konusu"
+                        placeholder="Adınızı girin"
                         required
                       />
                     </div>
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2">
-                        Mesajınız
+                      <label htmlFor="email" className="block text-sm font-medium mb-2">
+                        E-posta
                       </label>
-                      <Textarea
+                      <Input
                         className="rounded-lg"
-                        id="message"
-                        name="message"
-                        value={formData.message}
+                        id="email"
+                        type="email"
+                        name="email"
+                        value={formData.email}
                         onChange={handleChange}
-                        placeholder="Mesajınızı buraya yazın..."
-                        rows={6}
+                        placeholder="E-posta adresinizi girin"
                         required
                       />
                     </div>
-                    <Button type="submit" className="w-full gradient-bg text-white rounded-lg">
-                      <Send className="h-4 w-4 mr-2" />
-                      Mesaj Gönder
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Sağ Kartlar */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col items-center justify-center space-y-8"
-            >
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-gradient">
-                    İletişim Bilgileri
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6 p-6">
-                  {contactInfo.map((info, index) => (
-                    <motion.a
-                      key={index}
-                      href={info.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-4 p-4 rounded-lg hover:bg-accent transition-colors group"
-                      whileHover={{ x: 10 }}
-                    >
-                      <div className="w-12 h-12 gradient-bg rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <info.icon className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">{info.title}</h3>
-                        <p className="text-muted-foreground">{info.value}</p>
-                      </div>
-                    </motion.a>
-                  ))}
-                </CardContent>
-              </Card>
-
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-semibold mb-4">CV İndir</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Detaylı özgeçmişimi indirmek için aşağıdaki butona tıklayın.
-                  </p>
-                  <Button
-                    className="gradient-bg text-white rounded-lg"
-                    onClick={handleCvDownload}
-                  >
-                    CV İndir
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                      Konu
+                    </label>
+                    <Input
+                      className="rounded-lg"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      placeholder="Mesaj konusu"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                      Mesajınız
+                    </label>
+                    <Textarea
+                      className="rounded-lg"
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Mesajınızı buraya yazın..."
+                      rows={6}
+                      required
+                    />
+                  </div>
+                  <Button type="submit" className="w-full gradient-bg text-white rounded-lg">
+                    <Send className="h-4 w-4 mr-2" />
+                    Mesaj Gönder
                   </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
+                </form>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Sağ: Bilgiler ve CV */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col items-center justify-center space-y-8 px-4 sm:px-6"
+          >
+            {/* İletişim Bilgileri */}
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+              <CardHeader>
+                <CardTitle className="text-2xl text-gradient">
+                  İletişim Bilgileri
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6 p-6">
+                {contactInfo.map((info, index) => (
+                  <motion.a
+                    key={index}
+                    href={info.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-4 p-4 rounded-lg hover:bg-accent transition-colors group"
+                    whileHover={{ x: 10 }}
+                  >
+                    <div className="w-12 h-12 gradient-bg rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <info.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{info.title}</h3>
+                      <p className="text-muted-foreground">{info.value}</p>
+                    </div>
+                  </motion.a>
+                ))}
+              </CardContent>
+            </Card>
+
+            {/* CV İndir */}
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-semibold mb-4">CV İndir</h3>
+                <p className="text-muted-foreground mb-6">
+                  Detaylı özgeçmişimi indirmek için aşağıdaki butona tıklayın.
+                </p>
+                <Button
+                  className="gradient-bg text-white rounded-lg"
+                  onClick={handleCvDownload}
+                >
+                  CV İndir
+                </Button>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
-      </section>
-    </div>
-  );
+      </div>
+    </section>
+  </div>
+);
+
 };
 
 export default ContactPage;
