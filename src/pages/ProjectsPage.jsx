@@ -16,52 +16,20 @@ const ProjectsPage = () => {
   const [imageToView, setImageToView] = useState('');
 
   useEffect(() => {
-    const loadProjects = () => {
-      const savedProjects = localStorage.getItem('portfolioProjects');
-      if (savedProjects) {
-        setProjects(JSON.parse(savedProjects).map(p => ({...p, likes: p.likes || 0})));
-      } else {
-        const demoProjects = [
-          {
-            id: 1,
-            title: 'Modern Cafe Logo Tasarımı',
-            category: 'Logo Tasarımı',
-            description: 'Minimalist ve modern bir cafe için logo ve kurumsal kimlik tasarımı',
-            image: 'https://images.unsplash.com/photo-1595872018818-97555653a011',
-            imageUrl: 'https://images.unsplash.com/photo-1595872018818-97555653a011',
-            createdAt: new Date().toISOString(),
-            likes: 0
-          },
-          {
-            id: 2,
-            title: 'Sanat Festivali Afişi',
-            category: 'Afiş Tasarımı',
-            description: 'Renkli ve dinamik sanat festivali afiş tasarımı',
-            image: 'https://images.unsplash.com/photo-1508870114002-873a1f6097cd',
-            imageUrl: 'https://images.unsplash.com/photo-1508870114002-873a1f6097cd',
-            createdAt: new Date().toISOString(),
-            likes: 0
-          },
-          {
-            id: 3,
-            title: 'Sosyal Medya Kampanyası',
-            category: 'Sosyal Medya',
-            description: 'Moda markası için Instagram post serisi',
-            image: 'https://images.unsplash.com/photo-1611162616805-679009902230',
-            imageUrl: 'https://images.unsplash.com/photo-1611162616805-679009902230',
-            createdAt: new Date().toISOString(),
-            likes: 0
-          }
-        ];
-        setProjects(demoProjects);
-        localStorage.setItem('portfolioProjects', JSON.stringify(demoProjects));
-      }
-    };
-    loadProjects();
-    window.addEventListener('storage', loadProjects);
-    return () => window.removeEventListener('storage', loadProjects);
-
-  }, []);
+  setProjects([
+    {
+      id: 1,
+      title: 'Golden Bean Latte Afişi',
+      category: 'Afiş tasarımı',
+      description: 'Yeni çıkan latte ürününü tanıtan sade ve şık bir kahve afişi tasarımıdır.',
+      image: '/projects/img1.jpg',
+      imageUrl: '/projects/img1.jpg',
+      alt: 'Üstten çekilmiş latte fincanı, koyu yeşil arka plan ve bilgilendirici etiketlerle afiş tasarımı.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    }
+  ]);
+}, []);
 
   const categories = ['Tümü', 'Logo Tasarımı', 'Afiş Tasarımı', 'Sosyal Medya', 'Broşür', 'Kartvizit', '3D Modelleme'];
   const [selectedCategory, setSelectedCategory] = useState('Tümü');
