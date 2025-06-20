@@ -103,7 +103,7 @@ const ContactPage = () => {
       <Header />
       <AdminSecretButton />
       
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-2 xs:px-3 sm:px-6">
         <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -119,7 +119,7 @@ const ContactPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 min-w-0">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0 overflow-x-auto">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -134,7 +134,7 @@ const ContactPage = () => {
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 gap-4 min-w-0">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium mb-2">
                           Adınız
