@@ -99,12 +99,12 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Header />
       <AdminSecretButton />
       
       <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto">
+        <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -119,7 +119,7 @@ const ContactPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 min-w-0">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
