@@ -202,105 +202,106 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <AdminSecretButton />
-      
-      <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
-              Projelerim
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Yaratıcılık ve profesyonelliğin buluştuğu tasarım portföyüm. 
-              Her proje, benzersiz bir hikaye anlatıyor.
-            </p>
-          </motion.div>
+  <div className="min-h-screen">
+    <Header />
+    <AdminSecretButton />
+    
+    <section className="pt-24 pb-10 px-2 sm:pt-32 sm:pb-20 sm:px-6">
+      <div className="container mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-10 sm:mb-16"
+        >
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold text-gradient mb-4 sm:mb-6">
+            Projelerim
+          </h1>
+          <p className="text-base xs:text-lg sm:text-xl text-muted-foreground max-w-xs xs:max-w-md sm:max-w-3xl mx-auto">
+            Yaratıcılık ve profesyonelliğin buluştuğu tasarım portföyüm. 
+            Her proje, benzersiz bir hikaye anlatıyor.
+          </p>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
-          >
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
-                className={selectedCategory === category ? "gradient-bg text-white" : ""}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap flex-col xs:flex-row justify-center gap-2 sm:gap-4 mb-8 sm:mb-12"
+        >
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={selectedCategory === category ? "default" : "outline"}
+              onClick={() => setSelectedCategory(category)}
+              className={selectedCategory === category ? "gradient-bg text-white" : ""}
+              size="sm"
+            >
+              {category}
+            </Button>
+          ))}
+        </motion.div>
+
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
               >
-                {category}
-              </Button>
-            ))}
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.length > 0 ? (
-              filteredProjects.map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -10 }}
-                >
-                  <Card className="glass-effect border-0 overflow-hidden group hover:shadow-xl transition-all duration-300">
-                    <div className="relative overflow-hidden">
-                      <img  
-                        className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" 
-                        alt={project.image || project.title}
-                        src={project.imageUrl || project.image || "https://images.unsplash.com/photo-1595872018818-97555653a011"} />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                          <Button size="sm" variant="secondary" className="flex-1" onClick={() => openProjectDetails(project)}>
-                            <Eye className="h-4 w-4 mr-2" />
-                            İncele
-                          </Button>
-                          <Button size="sm" variant="secondary" onClick={() => openImageZoom(project.imageUrl || project.image)}>
-                            <ZoomIn className="h-4 w-4" />
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                    <CardContent className="p-6">
-                      <div className="flex justify-between items-center mb-2">
-                        <div className="text-sm text-primary font-medium">
-                          {project.category}
-                        </div>
-                        <Button variant="ghost" size="sm" onClick={() => handleLike(project.id)} className="flex items-center">
-                          <Heart className={`h-4 w-4 mr-1 ${ (project.likes || 0) > 0 ? 'text-red-500 fill-current' : 'text-muted-foreground'}`} /> 
-                          <span className="text-xs text-muted-foreground">({project.likes || 0})</span>
+                <Card className="glass-effect border-0 overflow-hidden group hover:shadow-xl transition-all duration-300">
+                  <div className="relative overflow-hidden">
+                    <img  
+                      className="w-full h-40 xs:h-52 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-300" 
+                      alt={project.alt || project.title}
+                      src={project.imageUrl || project.image || "https://images.unsplash.com/photo-1595872018818-97555653a011"} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-2 left-2 right-2 flex gap-1 sm:gap-2">
+                        <Button size="sm" variant="secondary" className="flex-1" onClick={() => openProjectDetails(project)}>
+                          <Eye className="h-4 w-4 mr-2" />
+                          İncele
+                        </Button>
+                        <Button size="sm" variant="secondary" onClick={() => openImageZoom(project.imageUrl || project.image)}>
+                          <ZoomIn className="h-4 w-4" />
                         </Button>
                       </div>
-                      <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                      <p className="text-muted-foreground text-sm truncate">
-                        {project.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="col-span-full text-center py-20"
-              >
-                <p className="text-xl text-muted-foreground">
-                  Bu kategoride henüz proje bulunmuyor.
-                </p>
+                    </div>
+                  </div>
+                  <CardContent className="p-3 xs:p-4 sm:p-6">
+                    <div className="flex justify-between items-center mb-1 sm:mb-2">
+                      <div className="text-xs sm:text-sm text-primary font-medium">
+                        {project.category}
+                      </div>
+                      <Button variant="ghost" size="sm" onClick={() => handleLike(project.id)} className="flex items-center">
+                        <Heart className={`h-4 w-4 mr-1 ${ (project.likes || 0) > 0 ? 'text-red-500 fill-current' : 'text-muted-foreground'}`} /> 
+                        <span className="text-xs text-muted-foreground">({project.likes || 0})</span>
+                      </Button>
+                    </div>
+                    <h3 className="text-base sm:text-xl font-semibold mb-1 sm:mb-3">{project.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground truncate">
+                      {project.description}
+                    </p>
+                  </CardContent>
+                </Card>
               </motion.div>
-            )}
-          </div>
+            ))
+          ) : (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="col-span-full text-center py-10 sm:py-20"
+            >
+              <p className="text-base sm:text-xl text-muted-foreground">
+                Bu kategoride henüz proje bulunmuyor.
+              </p>
+            </motion.div>
+          )}
         </div>
-      </section>
+      </div>
+    </section>
 
       
       <Dialog open={selectedProject !== null} onOpenChange={(isOpen) => !isOpen && setSelectedProject(null)}>
