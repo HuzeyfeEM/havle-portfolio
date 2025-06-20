@@ -20,7 +20,7 @@ const ProjectsPage = () => {
     {
       id: 1,
       title: 'Golden Bean Latte Afişi',
-      category: 'Afiş tasarımı',
+      category: 'Afiş Tasarımı',
       description: 'Yeni çıkan latte ürününü tanıtan sade ve şık bir kahve afişi tasarımıdır.',
       image: '/projects/img1.jpg',
       imageUrl: '/projects/img1.jpg',
@@ -31,7 +31,7 @@ const ProjectsPage = () => {
     {
       id: 2,
       title: 'Adele Melbourne Konser Afişi',
-      category: 'Afiş tasarımı',
+      category: 'Afiş Tasarımı',
       description: 'Adele’in 2023 Melbourne konserini tanıtan minimal ve şık bir afiş tasarımıdır.',
       image: '/projects/img2.jpg',
       imageUrl: '/projects/img2.jpg',
@@ -42,7 +42,7 @@ const ProjectsPage = () => {
     {
       id: 3,
       title: 'Nescafé Blend 43 İndirim Afişi',
-      category: 'Afiş tasarımı',
+      category: 'Afiş Tasarımı',
       description: 'Nescafé ürününü ve %20 indirim fırsatını duyuran dikkat çekici bir kampanya afişidir.',
       image: '/projects/img3.jpg',
       imageUrl: '/projects/img3.jpg',
@@ -53,7 +53,7 @@ const ProjectsPage = () => {
     {
       id: 4,
       title: 'Tiffany & Co. Mücevher Kataloğu Tasarımı',
-      category: 'Dergi ve Broşör tasarımı',
+      category: 'Broşür',
       description: 'Lüks mücevher markası Tiffany & Co. için hazırlanan şık ve sade ürün tanıtım broşürü.',
       image: '/projects/img4.jpg',
       imageUrl: '/projects/img4.jpg',
@@ -64,7 +64,7 @@ const ProjectsPage = () => {
     {
       id: 5,
       title: 'Vogue Kış Moda Sayısı Dergi Tasarımı',
-      category: 'Broşör ve dergi tasarımı',
+      category: 'Broşür',
       description: 'Moda trendleri, makyaj önerileri ve parfüm tanıtımlarını içeren şık bir Vogue dergi düzeni.',
       image: '/projects/img5.jpg',
       imageUrl: '/projects/img5.jpg',
@@ -75,7 +75,7 @@ const ProjectsPage = () => {
     {
       id: 6,
       title: 'The Velvet Rose Çiçek Broşürü Tasarımı',
-      category: 'Broşör ve dergi tasarımı',
+      category: 'Broşür',
       description: 'Çiçek koleksiyonu, fiyat listesi ve kişiye özel buket hizmeti tanıtımı için hazırlanmış zarif broşür.',
       image: '/projects/img6.jpg',
       imageUrl: '/projects/img6.jpg',
@@ -86,7 +86,7 @@ const ProjectsPage = () => {
     {
       id: 7,
       title: 'Modern Kozmetik Koleksiyonu',
-      category: '3D modelleme',
+      category: '3D Modelleme',
       description: 'Modern kozmetik ürünlerinin minimalist 3D tasarımı. Kozmetik markaları ve e-ticaret platformları için ürün tanıtım görseli.',
       image: '/projects/img7.jpg',
       imageUrl: '/projects/img7.jpg',
@@ -97,7 +97,7 @@ const ProjectsPage = () => {
     {
       id: 8,
       title: 'Ortaçağ Savaş Silahları - 3D Modelleme',
-      category: '3D modelleme',
+      category: '3D Modelleme',
       description: 'Ortaçağ dönemine ait savaş baltası ve hançer silahlarının detaylı 3D modellenmesi. Oyun tasarımı, tarihi animasyonlar ve eğitim materyalleri için kullanılabilir.',
       image: '/projects/img8.jpg',
       imageUrl: '/projects/img8.jpg',
@@ -108,7 +108,7 @@ const ProjectsPage = () => {
     {
       id: 9,
       title: 'Şehir Sokağı -  3D Sahne',
-      category: '3D modelleme',
+      category: '3D Modelleme',
       description: 'Kentsel yaşam alanını temsil eden minimalist 3D sahne tasarımı. Oyun geliştirme, animasyon projeleri ve mimari görselleştirme için kullanılabilir.',
       image: '/projects/img9.jpg',
       imageUrl: '/projects/img9.jpg',
@@ -119,7 +119,7 @@ const ProjectsPage = () => {
     {
       id: 10,
       title: 'Retro Mutfak Tasarımı',
-      category: '3D modelleme',
+      category: '3D Modelleme',
       description: '1950\'ler tarzı retro mutfak iç mekan tasarımının izometrik 3D görselleştirmesi. İç mimarlık portfolyoları ve oyun sahneleri için ideal.',
       image: '/projects/img10.jpg',
       imageUrl: '/projects/img10.jpg',
@@ -130,7 +130,7 @@ const ProjectsPage = () => {
     {
       id: 11,
       title: 'Üniversite Bilgisayar Sınıfı - 3D  Modeli',
-      category: '3D modelleme',
+      category: '3D Modelleme',
       description: 'Öğrencilik döneminden üniversite bilgisayar sınıfının nostaljik 3D yeniden yaratımı.',
       image: '/projects/img11.jpg',
       imageUrl: '/projects/img11.jpg',
@@ -141,7 +141,7 @@ const ProjectsPage = () => {
     {
       id: 12,
       title: 'Klasik Satranç Takımı - 3D Modelleme',
-      category: '3D modelleme',
+      category: '3D Modelleme',
       description: 'Geleneksel satranç takımının detaylı 3D görselleştirmesi. Oyun tasarımı, eğitim materyalleri ve dijital sanat projeleri için kullanılabilir.',
       image: '/projects/img12.jpg',
       imageUrl: '/projects/img12.jpg',
@@ -152,7 +152,7 @@ const ProjectsPage = () => {
     {
       id: 13,
       title: 'Luna Jewellry -logo Tasarımı',
-      category: 'logo tasarımı',
+      category: 'logo Tasarımı',
       description: 'Mücevher firması için minimalist kartvizit tasarımı. Elmas logosu ve temiz tipografi ile lüks marka kimliği yansıtılmış.',
       image: '/projects/img13.jpg',
       imageUrl: '/projects/img13.jpg',
@@ -163,7 +163,7 @@ const ProjectsPage = () => {
     {
       id: 14,
       title: "Berry's Bakery Tiramisu - Sosyal Medya Kampanyası",
-      category: 'sosyal medya',
+      category: 'sosyal Sosyal',
       description: 'Fırın işletmesi için tiramisu ürününe özel %50 indirim kampanyası sosyal medya postu. Instagram ve Facebook paylaşımları için tasarlanmış.',
       image: '/projects/img14.jpg',
       imageUrl: '/projects/img14.jpg',
