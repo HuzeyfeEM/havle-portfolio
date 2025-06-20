@@ -177,32 +177,24 @@ const ProjectsPage = () => {
   const categories = ['Tümü', 'Logo Tasarımı', 'Afiş Tasarımı', 'Sosyal Medya', 'Broşür', 'Kartvizit', '3D Modelleme'];
   const [selectedCategory, setSelectedCategory] = useState('Tümü');
 
-  const filteredProjects = selectedCategory === 'Tümü' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
-
   const handleLike = (projectId) => {
-  const likedProjects = JSON.parse(localStorage.getItem('likedProjects') || '[]');
-  const alreadyLiked = likedProjects.includes(projectId);
-
-  setProjects(prevProjects => {
-    const updatedProjects = prevProjects.map(p =>
-      p.id === projectId
-        ? { ...p, likes: (p.likes || 0) + (alreadyLiked ? -1 : 1) }
-        : p
-    );
-    localStorage.setItem('portfolioProjects', JSON.stringify(updatedProjects));
-    // Toggle işlemi
-    if (alreadyLiked) {
-      localStorage.setItem('likedProjects', JSON.stringify(likedProjects.filter(id => id !== projectId)));
-      toast({ title: "Beğeni kaldırıldı", description: "Beğeniniz geri alındı." });
-    } else {
+    // localStorage'dan daha önce beğenilen projeleri al
+    const likedProjects = JSON.parse(localStorage.getItem('likedProjects') || '[]');
+    if (likedProjects.includes(projectId)) {
+      toast({ title: "Zaten beğendiniz!", description: "Bir projeyi sadece bir kez beğenebilirsiniz." });
+      return;
+    }
+    setProjects(prevProjects => {
+      const updatedProjects = prevProjects.map(p =>
+        p.id === projectId ? { ...p, likes: (p.likes || 0) + 1 } : p
+      );
+      localStorage.setItem('portfolioProjects', JSON.stringify(updatedProjects));
+      // Beğenilen projeyi localStorage'a ekle
       localStorage.setItem('likedProjects', JSON.stringify([...likedProjects, projectId]));
       toast({ title: "Beğenildi!", description: "Projeyi beğendiniz." });
-    }
-    return updatedProjects;
-  });
-};
+      return updatedProjects;
+    });
+  };
 
   const openProjectDetails = (project) => {
     setSelectedProject(project);
