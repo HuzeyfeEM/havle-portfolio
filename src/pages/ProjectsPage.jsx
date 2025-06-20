@@ -18,6 +18,50 @@ const ProjectsPage = () => {
   useEffect(() => {
   setProjects([
     {
+      id: 1,
+      title: 'Golden Bean Latte Afişi',
+      category: 'Afiş Tasarımı',
+      description: 'Yeni çıkan latte ürününü tanıtan sade ve şık bir kahve afişi tasarımıdır.',
+      image: '/projects/img1.jpg',
+      imageUrl: '/projects/img1.jpg',
+      alt: 'Üstten çekilmiş latte fincanı, koyu yeşil arka plan ve bilgilendirici etiketlerle afiş tasarımı.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 2,
+      title: 'Adele Melbourne Konser Afişi',
+      category: 'Afiş Tasarımı',
+      description: 'Adele’in 2023 Melbourne konserini tanıtan minimal ve şık bir afiş tasarımıdır.',
+      image: '/projects/img2.jpg',
+      imageUrl: '/projects/img2.jpg',
+      alt: 'Siyah fon önünde oturan Adele’in yer aldığı altın sarısı yazılı konser afişi.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 3,
+      title: 'Nescafé Blend 43 İndirim Afişi',
+      category: 'Afiş Tasarımı',
+      description: 'Nescafé ürününü ve %20 indirim fırsatını duyuran dikkat çekici bir kampanya afişidir.',
+      image: '/projects/img3.jpg',
+      imageUrl: '/projects/img3.jpg',
+      alt: 'Kırmızı kupalı Nescafé kavanozu ve kahve çekirdekleriyle süslenmiş indirimli ürün afişi.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
+      id: 4,
+      title: 'Tiffany & Co. Mücevher Kataloğu Tasarımı',
+      category: 'Broşür',
+      description: 'Lüks mücevher markası Tiffany & Co. için hazırlanan şık ve sade ürün tanıtım broşürü.',
+      image: '/projects/img4.jpg',
+      imageUrl: '/projects/img4.jpg',
+      alt: 'Tiffany & Co.\'ya ait yüzük, kolye, bilezik ve küpe gibi ürünlerin yer aldığı iki katlı turkuaz tonlarında mücevher broşürü.',
+      createdAt: new Date().toISOString(),
+      likes: 0
+    },
+    {
       id: 5,
       title: 'Vogue Kış Moda Sayısı Dergi Tasarımı',
       category: 'Broşür',
