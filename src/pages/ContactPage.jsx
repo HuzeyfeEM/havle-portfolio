@@ -119,13 +119,13 @@ const ContactPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0 justify-items-center">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center items-center"
+              className="w-full"
             >
               <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
                 <CardHeader>
@@ -209,7 +209,7 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col items-center justify-center space-y-8"
+              className="flex flex-col w-full space-y-8"
             >
               <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
                 <CardHeader>
