@@ -124,8 +124,9 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex justify-center"
             >
-              <Card className="glass-effect border-0">
+              <Card className="glass-effect border-0 w-full max-w-md">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gradient">
                     Mesaj Gönder
@@ -202,9 +203,9 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="space-y-8"
+              className="flex flex-col items-center space-y-8"
             >
-              <Card className="glass-effect border-0">
+              <Card className="glass-effect border-0 w-full max-w-md">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gradient">
                     İletişim Bilgileri
@@ -232,7 +233,7 @@ const ContactPage = () => {
                 </CardContent>
               </Card>
 
-              <Card className="glass-effect border-0">
+              <Card className="glass-effect border-0 w-full max-w-md">
                 <CardContent className="p-6 text-center">
                   <h3 className="text-xl font-semibold mb-4">CV İndir</h3>
                   <p className="text-muted-foreground mb-6">
