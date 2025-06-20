@@ -103,8 +103,8 @@ const ContactPage = () => {
     <Header />
     <AdminSecretButton />
 
-    <section className="pt-32 pb-20 px-2 xs:px-3 sm:px-6">
-      <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
+    <section className="pt-32 pb-20 px-4 sm:px-6">
+      <div className="w-full max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -119,23 +119,21 @@ const ContactPage = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Sol: Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center items-center px-4 sm:px-6"
+            className="flex justify-center items-center"
           >
-            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl">
               <CardHeader>
-                <CardTitle className="text-2xl text-gradient">
-                  Mesaj Gönder
-                </CardTitle>
+                <CardTitle className="text-2xl text-gradient">Mesaj Gönder</CardTitle>
               </CardHeader>
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4 min-w-0">
+                  <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Adınız
@@ -209,14 +207,12 @@ const ContactPage = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col items-center justify-center space-y-8 px-4 sm:px-6"
+            className="flex flex-col items-center justify-center space-y-8"
           >
             {/* İletişim Bilgileri */}
-            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl">
               <CardHeader>
-                <CardTitle className="text-2xl text-gradient">
-                  İletişim Bilgileri
-                </CardTitle>
+                <CardTitle className="text-2xl text-gradient">İletişim Bilgileri</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6 p-6">
                 {contactInfo.map((info, index) => (
@@ -241,16 +237,13 @@ const ContactPage = () => {
             </Card>
 
             {/* CV İndir */}
-            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+            <Card className="glass-effect border-0 w-full max-w-md rounded-2xl">
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-semibold mb-4">CV İndir</h3>
                 <p className="text-muted-foreground mb-6">
                   Detaylı özgeçmişimi indirmek için aşağıdaki butona tıklayın.
                 </p>
-                <Button
-                  className="gradient-bg text-white rounded-lg"
-                  onClick={handleCvDownload}
-                >
+                <Button className="gradient-bg text-white rounded-lg" onClick={handleCvDownload}>
                   CV İndir
                 </Button>
               </CardContent>
@@ -261,7 +254,6 @@ const ContactPage = () => {
     </section>
   </div>
 );
-
 };
 
 export default ContactPage;
