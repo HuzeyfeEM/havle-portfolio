@@ -99,7 +99,7 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden sm:mr-100px sm:pr-5">
       <Header />
       <AdminSecretButton />
 
@@ -119,7 +119,7 @@ const ContactPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0 justify-items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0 justify-items-center ">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -127,13 +127,13 @@ const ContactPage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="w-full"
             >
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto sm:mr-0" style ={{}}>
                 <CardHeader>
                   <CardTitle className="text-2xl text-gradient">
                     Mesaj Gönder
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className="p-5 ">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4 min-w-0">
                       <div>
@@ -217,7 +217,7 @@ const ContactPage = () => {
                     İletişim Bilgileri
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6 p-6">
+                <CardContent className="space-y-6 p-0">
                   {contactInfo.map((info, index) => (
                     <motion.a
                       key={index}
