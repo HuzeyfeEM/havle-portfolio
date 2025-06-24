@@ -99,44 +99,44 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden sm:mr-100px sm:pr-5">
+    <div className="min-h-screen overflow-x-hidden bg-background">
       <Header />
       <AdminSecretButton />
 
-      <section className="pt-32 pb-20 px-2 xs:px-3 sm:px-6">
-        <div className="w-full max-w-5xl mx-auto px-3 xs:px-4 sm:px-6">
+      <section className="pt-28 pb-12 px-2 xs:px-3 sm:px-6">
+        <div className="w-full max-w-5xl mx-auto px-2 xs:px-3 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
+            <h1 className="text-3xl xs:text-4xl md:text-6xl font-bold text-gradient mb-4">
               İletişim
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base xs:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Projeniz için benimle iletişime geçin. Birlikte harika işler çıkaralım!
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 min-w-0 justify-items-center ">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-10 min-w-0">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full"
+              className="w-full max-w-md mx-auto"
             >
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto sm:mr-0" style ={{}}>
+              <Card className="glass-effect border-0 w-full rounded-2xl">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gradient">
                     Mesaj Gönder
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-5 ">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4 min-w-0">
-                      <div>
+                <CardContent className="p-5">
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="flex flex-col md:flex-row gap-4">
+                      <div className="flex-1">
                         <label htmlFor="name" className="block text-sm font-medium mb-2">
                           Adınız
                         </label>
@@ -150,7 +150,7 @@ const ContactPage = () => {
                           required
                         />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <label htmlFor="email" className="block text-sm font-medium mb-2">
                           E-posta
                         </label>
@@ -209,9 +209,9 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col w-full space-y-8"
+              className="flex flex-col w-full max-w-md mx-auto space-y-8"
             >
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+              <Card className="glass-effect border-0 w-full rounded-2xl">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gradient">
                     İletişim Bilgileri
@@ -239,7 +239,7 @@ const ContactPage = () => {
                 </CardContent>
               </Card>
 
-              <Card className="glass-effect border-0 w-full max-w-md rounded-2xl mx-auto">
+              <Card className="glass-effect border-0 w-full rounded-2xl">
                 <CardContent className="p-6 text-center">
                   <h3 className="text-xl font-semibold mb-4">CV İndir</h3>
                   <p className="text-muted-foreground mb-6">
