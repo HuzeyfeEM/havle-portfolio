@@ -119,7 +119,7 @@ const ContactPage = () => {
             </p>
           </motion.div>
 
-          <div className="flex flex-col lg:flex-row gap-6 sm:gap-10 min-w-0">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-10 min-w-0">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
